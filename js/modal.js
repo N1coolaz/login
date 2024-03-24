@@ -20,10 +20,10 @@ const createMusic = () => {
             'content-type': 'application/json;charset=utf-8',
         },
         body: `{
-            "faixa": "${musicName}",
-            "cantor": "${artist}",
-            "estrelas": "${stars}",
-            "album": "${album}"
+            "name": "${musicName}",
+            "artist": "${artist}",
+            "album": "${album}",
+            "stars": "${stars}"
         }`
     }
 

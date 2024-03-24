@@ -22,10 +22,10 @@ const listMusics = () => {
 
                     tableMusics.innerHTML += `
                         <tr>
-                            <td>${music.faixa}</td>
-                            <td>${music.cantor}</td>
-                            <td>${music.estrelas}</td>
+                            <td>${music.name}</td>
+                            <td>${music.artist}</td>
                             <td>${music.album}</td>
+                            <td>${music.stars}</td>
                             <td>
                                 <button data-key=${key} onclick="deleteMusic(this)"><i class="fa-solid fa-trash"></i></button>
                             </td>
