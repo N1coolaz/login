@@ -26,11 +26,7 @@ const signin = () => {
 const signinGoogle = () => {
     const provider = new firebase.auth.GoogleAuthProvider()
 
-    const signIn = provider => {
-        firebase.auth().signInWithPopup(provider)
-            .then(result => console.log(result))
-            .catch(error => console.log(error))
-    }
+    const signIn = provider => firebase.auth().signInWithPopup(provider)
 
     signIn(provider)
 }
