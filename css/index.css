@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+}
+
+main section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 40px;
+}
+
+main form {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+main form + form {
+    border-left: 1px solid black;
+}
+
+main form .fields {
+    display: flex;
+    flex-direction: column;
+}
+
+main form .fields input, main form .fields button {
+    padding: 15px;
+    outline: none;
+    margin: 10px 15px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+main form .fields input[type="button"], main form .fields button {
+    background-color: #407bff;
+    color: white;
+    border: none;
+    transition: all 0.5s;
+}
+
+main form .fields input[type="button"]:hover, main form .fields button:hover {
+    cursor: pointer;
+    background-color: #3362cc;
+}
+
+main form img {
+    width: 100%;
+    margin: 15px;
+}
+
+.btnGoogle {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: #263238 !important;
+    transition: all 0.5s;
+}
+
+.btnGoogle img {
+    width: 24px;
+    margin: 0 15px 0 0;
+}
+
+.btnGoogle:hover {
+    background-color: black !important;
+}

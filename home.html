@@ -1,62 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="PT-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista músicas</title>
-    <script src="https://kit.fontawesome.com/309e31f583.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <title>ETEC Albert Einstein - Home</title>
+    <link rel="shortcut icon" href="img/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
+    <header class="user-data">
+        <div class="avatar">
+            <img src="/img/user-avatar.jpg" alt="Foto de perfil" id="user-avatar">
+
+            <span id="user-email" class="user-email">"Email do usuário"</span>
+        </div>
+
+        <div class="actions">
+            <input type="button" value="Adicionar música" onclick="openModal()">
+            <input type="button" value="Sair da conta" class="signout" onclick="signout()">
+        </div>
+    </header>
+
     <main>
+        <h1>Lista de músicas</h1>
+
+        <table id="table-musics">
+            <thead>
+                <tr>
+                    <th>Faixa</th>
+                    <th>Artista</th>
+                    <th>Estrelas</th>
+                    <th>Albúm</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+
+            <tbody>
+            <!--
+                <tr>
+                    <td>Nome da faixa</td>
+                    <td>Nome da artista</td>
+                    <td>Número de estrelas</td>
+                    <td>Nome do albúm</td>
+                    <td>
+                        <button><i class="fa-solid fa-trash"></i></button>
+                    </td>
+                </tr>
+            -->
+            </tbody>
+        </table>
+
+        <section id="modal-create-music" class="modal-create-music">
+            <img src="img/form.svg" alt="Imagem de formulário">
+            
+            <form class="fields">
+                <input type="text" name="music-name" id="music-name" class="music-name" placeholder="Digite o nome da música">
+                <input type="text" name="artist" id="artist" class="artist" placeholder="Digite o nome do artista">
+                <input type="text" name="album" id="album" class="album" placeholder="Digite o nome do albúm">
+                
+                <div class="stars-fields">
+                    <label for="stars">Quantidade de estrelas</label>
+                    <input type="range" name="stars" id="stars" class="stars" min="1" max="5" step="1">
+                </div>
     
-    <div id="dados">
-        <h1>Lista músicas Etec</h1>
-        <p id="perfil"></p>
-        <p id="foto"></p>
+                <input type="button" value="Criar música" onclick="createMusic()">
+                <input type="button" value="Cancelar" class="cancelModal" onclick="cancelModal()">
+            </form>
+        </section>
+    </main>
 
-        <button type="button" id="btnSair">Sair</button>
-
-        <button type="button" class="activeAddMudModal"> Add + </button>
-    </div>
-
-    <table class="table" id="listaMusicas">
-        <thead>
-            <tr><th>Faixa</th> <th>Artista</th> <th>Estrelas</th> <th>Álbum</th> <th> </th> </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
-    </main>   
-
-    <div class="modal addMusModal ">
-        <form>
-         <div class="form-item">
-          <label for="faixa">Nome da Faixa</label>
-          <input           type="text"           name="faixa"           id="faixa"           placeholder="Digite a Faixa"          />
-         </div>
-         <div class="form-item">
-          <label for="artista">Artista</label>
-          <input type="text" name="artista" id="artista"  />
-         </div>
-         <div class="form-item">
-          <label for="estrelas">Estrelas</label>
-          <input   type="range"  name="estrelas" id="estrelas" class="user-point"  min="0"   max="5"  step="1"/>
-         </div>
-         <div class="form-item">
-            <label for="album">Album</label>
-            <input type="text" name="album" id="album"  />
-           </div>
-  
-         <input type="submit" value="Criar" id="createMus" class="modal-btn" />
-         <input type="button" value="Cancelar" id="closeAddMusModal"  class="modal-btn"  />
-        </form>
-    </div>
-
-
+    <script src="https://kit.fontawesome.com/309e31f583.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-    <script src="config.js"></script>
-    <script src="session.js"></script>
-    <script src="lista.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/session.js"></script>
+    <script src="js/list.js"></script>
+    <script src="js/modal.js"></script>
 </body>
 </html>

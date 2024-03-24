@@ -1,49 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="PT-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ETEC AE - Autenticar</title>
-    <link rel="stylesheet" href="css/css.css">
+    <title>ETEC Albert Einstein - Autenticação</title>
+    <link rel="shortcut icon" href="img/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
+    <main>
+        <section>
+            <form class="signup">
+                <div class="ilustration">
+                    <h1>Sign-up</h1>
 
-    <h3>Etec Albert Einstein</h3>
-    <hr>
+                    <img src="img/signup.svg" alt="Signup">
+                </div>
 
-    <div class="container">
-        <div id="signin">
-            <h4>Entrar</h4>
-            
-            <input type="email" id="emailEntrar" placeholder="Informe email">
-            <br>
-            <input type="password" id="senhaEntrar" placeholder="Informe senha">
-            <br>
-            <input type="button" id="btnEntrar" value="Entrar">
-            
-            <input type="button" id="btnGoogle" value="Entrar Google">
-            
-        </div>
+                <div class="fields">
+                    <input type="email" name="emailSignup" id="emailSignup" placeholder="Digite seu email">
+                    <input type="password" name="passwordSignup" id="passwordSignup" placeholder="Digite sua senha">
+                    <input type="password" name="passwordConfirmSignup" id="passwordConfirmSignup" placeholder="Confirme sua senha">
+        
+                    <input type="button" id="btnSignup" value="Cadastrar-se" onclick="signup()">
+                </div>
+            </form>
 
-        <div id="signup">
-            <h4>Cadastrar</h4>
+            <form class="signin">
+                <div class="ilustration">
+                    <h1>Sign-in</h1>
 
-            <input type="email" id="emailCad" placeholder="Informe email">
-            <br>
-            
-            <input type="password" id="senhaCad"  placeholder="Informe senha">
-            <br>
-          
-            <input type="password" id="senhaCad2" placeholder="Confirme senha">
-            <br>    
-            <br>
-            <input type="button" id="btnCad" value="Criar usuário">
-        </div>
-    </div>
-    
+                    <img src="img/signin.svg" alt="Signup">
+                </div>
+
+                <div class="fields">
+                    <input type="email" name="emailSignin" id="emailSignin" placeholder="Digite seu email">
+                    <input type="password" name="passwordSignin" id="passwordSignin" placeholder="Digite sua senha">
+        
+                    <input type="button" id="btnSignin" value="Entrar com Email/Senha" onclick="signin()">
+
+                    <button type="button" id="btnGoogle" class="btnGoogle" onclick="signinGoogle()">
+                        <img src="img/google-icon.png" alt="Ícone do Google"> Entrar com Google
+                    </button>
+                </div>
+            </form>
+        </section>
+    </main>
+
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-    <script src="config.js"></script>
-    <script src="app.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/authentication.js"></script>
 </body>
 </html>
