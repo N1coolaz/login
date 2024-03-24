@@ -10,8 +10,6 @@ const createMusic = () => {
     const album = window.document.querySelector("#album").value
     const stars = window.document.querySelector("#stars").value
 
-    // const url = "https://etec24-3dc8c-default-rtdb.firebaseio.com/musicas.json"
-
     const url = "https://etec-c8a17-default-rtdb.firebaseio.com/music.json"
 
     const options = {
