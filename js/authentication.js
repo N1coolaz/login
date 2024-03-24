@@ -1,5 +1,5 @@
 auth.onAuthStateChanged(firebaseUser => {
-    if(firebaseUser) window.location.pathname = "home.html"
+    if(firebaseUser) window.location.pathname = "etec/home.html"
 })
 
 const signup = () => {
