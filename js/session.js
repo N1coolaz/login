@@ -14,7 +14,7 @@ auth.onAuthStateChanged(user => {
             userEmailAndNameField.innerHTML = currentUserName
         }
     } else {
-        window.location.pathname = "etec/index.html"
+        window.location.pathname = "index.html"
     }
 })
 

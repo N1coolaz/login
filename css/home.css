@@ -43,7 +43,7 @@
     margin: 10px 15px;
     border: 1px solid black;
     border-radius: 5px;
-    background-color: #407bff;
+    background-color: #ff725e;
     color: white;
     border: none;
     transition: all 0.5s;
@@ -51,15 +51,15 @@
 
 .user-data input:hover {
     cursor: pointer;
-    background-color: #3362cc;
+    background-color: #cf5e4e;
 }
 
 .user-data .actions .signout {
-    background-color: #ff4040;
+    background-color: #263238;
 }
 
 .user-data .actions .signout:hover {
-    background-color: #cc3333;
+    background-color: black;
 }
 
 main {
@@ -80,11 +80,11 @@ main table {
 }
 
 main table thead {
-    background-color: #407bff;
+    background-color: #ff725e;
 }
 
 main #table-musics thead tr:hover {
-    background-color: #3362cc;
+    background-color: #cf5e4e;
 }
   
 main #table-musics th, td {
@@ -128,7 +128,7 @@ main #table-musics button {
     align-items: center;
     padding: 20px;
     gap: 20px;
-    background-color: #263238;
+    background-color: #303637;
     position: fixed;
     top: 0;
     left: 0;
@@ -146,6 +146,10 @@ main #table-musics button {
     gap: 20px;
 }
 
+.modal-create-music .fields h1 {
+    color: white;
+}
+
 .modal-create-music .fields input {
     width: 100%;
     padding: 15px;
@@ -156,7 +160,7 @@ main #table-musics button {
 }
 
 .modal-create-music .fields input[type="button"] {
-    background-color: #407bff;
+    background-color: #ff725e;
     color: white;
     border: none;
     transition: all 0.5s;
@@ -198,13 +202,13 @@ main #table-musics button {
 
 .modal-create-music .fields input[type="button"]:hover {
     cursor: pointer;
-    background-color: #3362cc;
+    background-color: #cf5e4e;
 }
 
 .modal-create-music .fields .cancelModal {
-    background-color: #ff4040 !important;
+    background-color: #263238 !important;
 }
 
 .modal-create-music .fields .cancelModal:hover {
-    background-color: #cc3333 !important;
+    background-color: black !important;
 }

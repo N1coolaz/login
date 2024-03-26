@@ -10,7 +10,7 @@ const createMusic = () => {
     const album = window.document.querySelector("#album").value
     const stars = window.document.querySelector("#stars").value
 
-    const url = "https://etec-c8a17-default-rtdb.firebaseio.com/music.json"
+    const url = "https://login-18d1b-default-rtdb.firebaseio.com/music.json"
 
     const options = {
         method: "POST",

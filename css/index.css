@@ -48,7 +48,7 @@ main form .fields input, main form .fields button {
 }
 
 main form .fields input[type="button"], main form .fields button {
-    background-color: #407bff;
+    background-color: #ff725e;
     color: white;
     border: none;
     transition: all 0.5s;
@@ -56,7 +56,7 @@ main form .fields input[type="button"], main form .fields button {
 
 main form .fields input[type="button"]:hover, main form .fields button:hover {
     cursor: pointer;
-    background-color: #3362cc;
+    background-color: #cf5e4e;
 }
 
 main form img {
